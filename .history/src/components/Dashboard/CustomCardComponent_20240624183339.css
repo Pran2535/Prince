@@ -1,0 +1,115 @@
+/* TrendsettersCard.css */
+
+body {
+    background-color: skyblue;
+}
+
+.trendsetters-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.trendsetters-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.outer {
+    width: 100%;
+    height: 40px; /* Increased to 40px */
+    border-radius: 10px;
+    padding: 1px;
+    background: radial-gradient(circle 230px at 0% 0%, #ffffff, #0c0d0d);
+    position: relative;
+    cursor: pointer;
+}
+
+.dot {
+    width: 6px; /* Slightly increased for visibility */
+    aspect-ratio: 1;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ffffff;
+    border-radius: 100px;
+    z-index: 2;
+    right: 15px; /* Adjusted position */
+    top: 50%;
+    transform: translateY(-50%);
+    animation: moveDot 6s linear infinite;
+}
+
+@keyframes moveDot {
+    0%, 100% { right: 15px; }
+    50% { right: calc(100% - 21px); }
+}
+
+.card {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    border: solid 1px #202222;
+    background-size: 20px 20px;
+    background: radial-gradient(circle 280px at 0% 0%, #444444, #0c0d0d);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+.ray {
+    width: 70px; /* Increased width */
+    height: 100%;
+    position: absolute;
+    background-color: #c7c7c7;
+    opacity: 0.4;
+    box-shadow: 0 0 50px #fff;
+    filter: blur(10px);
+    transform-origin: left;
+    left: 0;
+    transform: skew(-20deg);
+}
+
+.card .text {
+    font-weight: bolder;
+    font-size: 1.2rem; /* Increased font size */
+    background: linear-gradient(45deg, #000000 4%, #fff, #000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-left: 20px; /* Adjusted margin */
+    z-index: 2;
+}
+
+.trendsetters-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-color: skyblue;
+}
+
+.trendsetters-header {
+    background: radial-gradient(circle 230px at 0% 0%, #ffffff, #0c0d0d);
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.trendsetters-header h2 {
+    color: #fff;
+    margin: 0;
+}
+
+.trendsetters-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
